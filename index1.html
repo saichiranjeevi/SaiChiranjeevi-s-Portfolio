@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio - Home</title>
+  <style>
+    :root {
+      --primary-color: #2c3e50;
+      --accent-color: #27ae60;
+      --background-color: #f4f6f8;
+      --nav-height: 64px;
+      --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-family);
+      background-color: var(--background-color);
+      color: var(--primary-color);
+      scroll-behavior: smooth;
+    }
+
+    /* Navigation bar styling */
+    nav {
+      background-color: #fff;
+      height: var(--nav-height);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    /* Logo or name placeholder */
+    .nav-logo {
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: var(--primary-color);
+      user-select: none;
+      letter-spacing: 0.05em;
+    }
+
+    /* Navigation links container */
+    .nav-links {
+      display: flex;
+      gap: 2.25rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li {
+      position: relative;
+    }
+
+    /* Link styles */
+    .nav-links a {
+      text-decoration: none;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      padding: 0.75rem 0;
+      border-bottom: 3px solid transparent;
+      transition: color 0.3s ease, border-bottom 0.3s ease;
+      display: inline-block;
+    }
+
+    /* Active and hover effect */
+    .nav-links a:hover,
+    .nav-links a:focus {
+      color: var(--accent-color);
+      border-bottom-color: var(--accent-color);
+      outline: none;
+    }
+
+    .nav-links a.home-link {
+      color: var(--accent-color);
+      font-weight: 700;
+      border-bottom-color: var(--accent-color);
+    }
+
+    /* Responsive nav for mobile */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+      }
+      .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 1.5rem;
+      }
+    }
+
+    /* Home/hero section styling */
+    section#home {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: calc(100vh - var(--nav-height));
+      padding: 3rem 1.5rem;
+      text-align: center;
+      background: linear-gradient(135deg, #27ae60 0%, #145a32 100%);
+      color: #fff;
+    }
+
+    section#home h1 {
+      font-size: 3rem;
+      margin: 0;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      max-width: 700px;
+    }
+
+    section#home p {
+      font-size: 1.25rem;
+      margin-top: 1rem;
+      max-width: 600px;
+      line-height: 1.5;
+      font-weight: 300;
+      color: #d4efdf;
+    }
+
+    /* Call to action button */
+    .btn-contact {
+      margin-top: 2.5rem;
+      background-color: #fff;
+      color: var(--accent-color);
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(39, 174, 96, 0.4);
+      transition: background-color 0.3s ease, color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-contact:hover,
+    .btn-contact:focus {
+      background-color: #1e8449;
+      color: #fff;
+      outline: none;
+      box-shadow: 0 7px 20px rgba(30, 132, 73, 0.6);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-logo" aria-label="Portfolio logo or name">B.Tech Graduate</div>
+    <ul class="nav-links" role="menubar" aria-label="Primary Navigation">
+      <li><a href="#home" class="home-link" role="menuitem" aria-current="page">Home</a></li>
+      <li><a href="#about" role="menuitem">About</a></li>
+      <li><a href="#projects" role="menuitem">Projects</a></li>
+      <li><a href="#contact" role="menuitem">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="home" tabindex="-1" aria-label="Home section">
+      <h1>Hello, I'm a Qualified B.Tech Graduate</h1>
+      <p>
+        Passionate about technology, innovation, and problem-solving. Welcome to my professional portfolio showcasing my projects, skills, and experience.
+      </p>
+      <a href="#contact" class="btn-contact">Get in Touch</a>
+    </section>
+
+    <section id="about" tabindex="-1" aria-label="About me section">
+      <h2>About Me</h2>
+      <p>Detail your academic achievements, technical expertise, and career goals here.</p>
+    </section>
+
+    <section id="projects" tabindex="-1" aria-label="Projects section">
+      <h2>Projects</h2>
+      <p>Highlights of your projects with descriptions, technologies used, and outcomes.</p>
+    </section>
+
+    <section id="contact" tabindex="-1" aria-label="Contact section">
+      <h2>Contact Me</h2>
+      <p>
+        Phone: <a href="tel:+918639951954">+91 86399 51954</a><br />
+        Email: <a href="mailto:chiranjeevisaibandaru567@gmail.com">chiranjeevisaibandaru567@gmail.com</a>
+      </p>
+    </section>
+  </main>
+</body>
+</html>

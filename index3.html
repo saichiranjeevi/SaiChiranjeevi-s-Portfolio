@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio Navigation - Contact</title>
+  <style>
+    :root {
+      --primary-color: #2c3e50;
+      --accent-color: #e67e22;
+      --background-color: #f8f9fa;
+      --nav-height: 60px;
+      --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-family);
+      background-color: var(--background-color);
+      color: var(--primary-color);
+    }
+
+    /* Navigation bar styling */
+    nav {
+      background-color: #fff;
+      height: var(--nav-height);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    /* Logo or name placeholder */
+    .nav-logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--primary-color);
+      user-select: none;
+    }
+
+    /* Navigation links container */
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li {
+      position: relative;
+    }
+
+    /* Link styles */
+    .nav-links a {
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      padding: 0.5rem 0;
+      transition: color 0.3s ease, border-bottom 0.3s ease;
+      border-bottom: 3px solid transparent;
+      display: inline-block;
+    }
+
+    /* Hover effect */
+    .nav-links a:hover,
+    .nav-links a:focus {
+      color: var(--accent-color);
+      border-bottom: 3px solid var(--accent-color);
+      outline: none;
+    }
+
+    /* Highlight Contact link specifically */
+    .nav-links a.contact-link {
+      color: var(--accent-color);
+      font-weight: 700;
+      border-bottom-color: var(--accent-color);
+    }
+
+    .nav-links a.contact-link:hover,
+    .nav-links a.contact-link:focus {
+      color: #d35400;
+      border-bottom-color: #d35400;
+    }
+
+    /* Responsive for mobile */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+      }
+      .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 1.5rem;
+      }
+    }
+
+    /* Contact section styles */
+    section#contact {
+      max-width: 600px;
+      margin: 3rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    section#contact h2 {
+      margin-top: 0;
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    section#contact p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: #444;
+    }
+
+    section#contact a {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    section#contact a:hover,
+    section#contact a:focus {
+      color: #d35400;
+      outline: none;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-logo">B.Tech Graduate</div>
+    <ul class="nav-links" role="menubar" aria-label="Primary Navigation">
+      <li><a href="#about" role="menuitem">About</a></li>
+      <li><a href="#projects" role="menuitem">Projects</a></li>
+      <li><a href="#skills" role="menuitem">Skills</a></li>
+      <li><a href="#contact" class="contact-link" role="menuitem" aria-current="page">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Other content sections for portfolio placeholder -->
+    <section id="about" tabindex="-1" aria-label="About me section">
+      <h2>About Me</h2>
+      <p>Professional summary and introduction.</p>
+    </section>
+
+    <section id="projects" tabindex="-1" aria-label="Projects section">
+      <h2>Projects</h2>
+      <p>Showcase of projects.</p>
+    </section>
+
+    <section id="skills" tabindex="-1" aria-label="Skills section">
+      <h2>Skills</h2>
+      <p>Technical skills highlight.</p>
+    </section>
+
+    <!-- Contact section targeted by nav -->
+    <section id="contact" tabindex="-1" aria-label="Contact section">
+      <h2>Contact Me</h2>
+      <p>
+        Feel free to get in touch via phone or email:
+      </p>
+      <p>
+        Phone: <a href="tel:+918639951954">+91 86399 51954</a><br />
+        Email: <a href="mailto:chiranjeevisaibandaru567@gmail.com">chiranjeevisaibandaru567@gmail.com</a>
+      </p>
+    </section>
+  </main>
+</body>
+</html>
+
