@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>B.Tech CSE Student - CV</title>
+<style>
+  /* CSS Variables for colors and spacing */
+  :root {
+    --color-bg: #ffffff;
+    --color-text: #374151; /* neutral dark gray */
+    --color-text-muted: #6b7280; /* neutral gray */
+    --color-primary: #111827; /* almost black */
+    --color-accent: #2563eb; /* blue accent */
+    --color-accent-hover: #1d4ed8;
+    --card-bg: #f9fafb;
+    --radius: 0.75rem;
+    --shadow-light: 0 2px 8px rgb(0 0 0 / 0.05);
+    --font-heading: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --transition-fast: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Reset and base */
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+  a:hover,
+  a:focus-visible {
+    color: var(--color-accent-hover);
+    outline-offset: 2px;
+  }
+
+  h1,h2,h3,h4,h5 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    margin-top: 3rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--color-text-muted);
+    font-size: 1rem;
+  }
+
+  /* Container */
+  .container {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  /* Header */
+  header {
+    text-align: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .name {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-bottom: 0.25rem;
+  }
+
+  .role {
+    font-size: 1.25rem;
+    color: var(--color-accent);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-links {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  /* Sections */
+  section {
+    margin-top: 3rem;
+  }
+
+  /* Card style for sections */
+  .card {
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-light);
+    padding: 1.75rem 2rem;
+  }
+
+  /* Education & Skills lists */
+  dl, ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  dl dt {
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+
+  dl dd {
+    margin-left: 0;
+    margin-bottom: 1rem;
+    color: var(--color-text-muted);
+  }
+
+  ul.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+    list-style: none;
+  }
+
+  ul.skills-list li {
+    background-color: var(--color-accent);
+    color: white;
+    padding: 0.4rem 0.9rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgb(37 99 235 / 0.5);
+    transition: background-color var(--transition-fast);
+  }
+  ul.skills-list li:hover,
+  ul.skills-list li:focus-visible {
+    background-color: var(--color-accent-hover);
+  }
+
+  /* Skill Bars */
+  .skill-bar {
+    background-color: #d1d5db;
+    border-radius: 9999px;
+    height: 10px;
+    overflow: hidden;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .skill-level {
+    height: 10px;
+    background-color: var(--color-accent);
+    border-radius: 9999px 0 0 9999px;
+    transition: width 0.4s ease;
+  }
+
+  /* Projects */
+  .projects-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  .projects-list li {
+    margin-bottom: 1.25rem;
+  }
+  .project-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--color-primary);
+  }
+  .project-desc {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    margin-top: 0.25rem;
+  }
+
+  /* Footer */
+  footer {
+    margin-top: 4rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+  }
+
+  /* Responsive */
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 2.2rem;
+    }
+    .contact-links {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+</style>
+</head>
+<body>
+  <main class="container" role="main">
+    <header>
+      <h1 class="name" tabindex="0">Sai Chiranjeevi.Bandaru</h1>
+      <p class="role" tabindex="0">B.Tech 1st Year - Computer Science &amp; Engineering</p>
+      <nav class="contact-links" aria-label="Contact Information">
+        <a href="mailto:chiranjeevisaibandaru567@gmail.com" tabindex="0" aria-label="Email chiranjeevisaibandaru567@gmail.com">chiranjeevisaibandaru567@gmail.com</a>
+        <a href="tel:+8639951954" tabindex="0" aria-label="Call +8639951954">+8 639 951 954</a>
+        <a href="https://www.linkedin.com/in/sai-chiranjeevi-45a831334?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener" tabindex="0" aria-label="LinkedIn Profile">LinkedIn</a>
+        <a href="https://github.com/saichiranjeevi" target="_blank" rel="noopener" tabindex="0" aria-label="GitHub Profile">GitHub</a>
+      </nav>
+    </header>
+
+    <section aria-labelledby="summary-title" class="card" tabindex="0">
+      <h2 id="summary-title">Summary</h2>
+      <p>Motivated and enthusiastic first-year B.Tech Computer Science & Engineering student with a passion for programming, problem-solving, and continuous learning. Eager to develop skills in software development and contribute to innovative projects.</p>
+    </section>
+
+    <section aria-labelledby="education-title" class="card" tabindex="0">
+      <h2 id="education-title">Education</h2>
+      <dl>
+        <dt>Bachelor of Technology (B.Tech) in Computer Science &amp; Engineering</dt>
+        <dd>Amrita University,Amritapuri, kerala - 2024 to Present</dd>
+        <dt>High School</dt>
+        <dd>Tirumala Junior College, Vishakapatnam, Andhra Pradesh - Completed 2024</dd>
+      </dl>
+    </section>
+
+    <section aria-labelledby="skills-title" class="card" tabindex="0">
+      <h2 id="skills-title">Skills</h2>
+      <ul class="skills-list" aria-label="Programming and technical skills">
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript (ES6+)</li>
+        <li>Python</li>
+        <li>Git &amp; GitHub</li>
+        <li>Basic Data Structures</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="projects-title" class="card" tabindex="0">
+      <h2 id="projects-title">Projects</h2>
+      <ul class="projects-list">
+        <li>
+          <span class="project-title">Portfolio Website</span>
+          <p class="project-desc">Designed and developed a responsive personal portfolio website using HTML, CSS, and JavaScript to showcase my projects and skills.</p>
+        </li>
+        <li>
+          <span class="project-title">Simple Calculator (Python)</span>
+          <p class="project-desc">Built a basic calculator app in Python capable of performing arithmetic operations with user input from the terminal.</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Your Full Name. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
